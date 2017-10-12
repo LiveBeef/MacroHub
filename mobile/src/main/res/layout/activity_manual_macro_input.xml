@@ -4,6 +4,378 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fullContainer"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.livebeef.macrohub.ManualMacroInputActivity">
+
+    <TextView
+        android:id="@+id/manualHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input your macros"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/manualHeading"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/workContainer"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/workDayTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="24sp"
+                android:text="Workout Day"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/workProTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Protein"
+                android:textColor="@color/colorProtein"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/workDayTextView"
+                app:layout_constraintTop_toTopOf="@+id/workProInput"
+                app:layout_constraintBottom_toBottomOf="@+id/workProInput"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/workCarbsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Carbs"
+                android:textColor="@color/colorCarbs"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/workDayTextView"
+                app:layout_constraintTop_toTopOf="@+id/workCarbsInput" />
+
+            <TextView
+                android:id="@+id/workFatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Fat"
+                android:textColor="@color/colorFat"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/workDayTextView"
+                app:layout_constraintTop_toTopOf="@+id/workFatInput"
+                app:layout_constraintBottom_toBottomOf="@+id/workFatInput"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/workProInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/workProTextView"
+                app:layout_constraintRight_toRightOf="@+id/workDayTextView"
+                app:layout_constraintTop_toBottomOf="@+id/workDayTextView" />
+
+            <EditText
+                android:id="@+id/workCarbsInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/workCarbsTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/workProInput"
+                app:layout_constraintRight_toRightOf="@+id/workProInput"
+                app:layout_constraintTop_toBottomOf="@+id/workProInput"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/workFatInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@+id/workProInput"
+                app:layout_constraintTop_toBottomOf="@+id/workCarbsInput" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workFatInput"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/workTotTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Total Workout Day Calories:"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/workTotCals"
+                    app:layout_constraintHorizontal_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/workTotCals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="0"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/workTotTextView"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/restContainer"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workContainer"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="1.0">
+
+            <TextView
+                android:id="@+id/restDayTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Rest Day"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/restProTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Protein"
+                android:textColor="@color/colorProtein"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/restCarbsInput"
+                app:layout_constraintLeft_toLeftOf="@+id/restDayTextView"
+                app:layout_constraintTop_toTopOf="@+id/restProInput" />
+
+            <TextView
+                android:id="@+id/restCarbsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Carbs"
+                android:textColor="@color/colorCarbs"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/restFatInput"
+                app:layout_constraintLeft_toLeftOf="@+id/restDayTextView"
+                app:layout_constraintTop_toTopOf="@+id/restCarbsInput" />
+
+            <TextView
+                android:id="@+id/restFatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="8dp"
+                android:text="Fat"
+                android:textColor="@color/colorFat"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/restDayTextView"
+                app:layout_constraintTop_toBottomOf="@+id/restCarbsInput" />
+
+            <EditText
+                android:id="@+id/restProInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/restProTextView"
+                app:layout_constraintRight_toRightOf="@+id/restDayTextView"
+                app:layout_constraintTop_toBottomOf="@+id/restDayTextView" />
+
+            <EditText
+                android:id="@+id/restCarbsInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restCarbsTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/restProInput"
+                app:layout_constraintRight_toRightOf="@+id/restProInput"
+                app:layout_constraintTop_toBottomOf="@+id/restProInput"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/restFatInput"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/restFatTextView"
+                app:layout_constraintLeft_toLeftOf="@+id/restProInput"
+                app:layout_constraintTop_toBottomOf="@+id/restCarbsInput"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restFatInput">
+
+                <TextView
+                    android:id="@+id/restTotTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Total Rest Day Calories:"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/restTotCals"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/restTotCals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/restTotTextView"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
 </android.support.constraint.ConstraintLayout>
