@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.livebeef.macrohub">
+    package="com.ajszoke.macrohub">
 
     <application
         android:allowBackup="true"
@@ -10,21 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
         <activity
-            android:name=".InitializeProfileActivity"
+            android:name="com.ajszoke.macrohub.InitializeProfileActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ManualMacroInputActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
+            android:name="com.ajszoke.macrohub.ManualMacroInputActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
-            android:name=".CalculateMacro1Activity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
+            android:name="com.ajszoke.macrohub.CalculateMacro1Activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name="com.ajszoke.macrohub.SetDaysActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

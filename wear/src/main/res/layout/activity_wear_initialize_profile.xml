@@ -7,5 +7,5 @@
     android:layout_height="match_parent"
     app:rectLayout="@layout/rect_activity_wear_initialize_profile"
     app:roundLayout="@layout/round_activity_wear_initialize_profile"
-    tools:context="com.livebeef.macrohub.WearInitializeProfileActivity"
+    tools:context="com.ajszoke.macrohub.WearInitializeProfileActivity"
     tools:deviceIds="wear"></android.support.wearable.view.WatchViewStub>

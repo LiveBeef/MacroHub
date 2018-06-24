@@ -1,4 +1,4 @@
-package com.livebeef.macrohub;
+package com.ajszoke.macrohub;
 
 import android.content.Intent;
 import android.os.Bundle;

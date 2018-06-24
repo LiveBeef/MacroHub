@@ -7,7 +7,7 @@
     android:id="@+id/fullContainer"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.livebeef.macrohub.ManualMacroInputActivity">
+    tools:context="com.ajszoke.macrohub.ManualMacroInputActivity">
 
     <TextView
         android:id="@+id/manualHeading"

@@ -1,7 +1,7 @@
-package com.livebeef.macrohub;
+package com.ajszoke.macrohub;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class CalculateMacro1Activity extends AppCompatActivity {
 

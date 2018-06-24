@@ -1,4 +1,4 @@
-package com.livebeef.macrohub;
+package com.ajszoke.macrohub;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -116,7 +116,7 @@ public class ManualMacroInputActivity extends AppCompatActivity {
                 editor.commit();
 
                 Intent launchSetDaysIntent = new Intent(ManualMacroInputActivity.this,
-                        ManualMacroInputActivity.class);
+                        SetDaysActivity.class);
                 startActivity(launchSetDaysIntent);
             }
         });
