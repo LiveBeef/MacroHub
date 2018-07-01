@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">MacroHub</string>
+
+    <string name="macro_carbs">Carbs</string>
+    <string name="macro_fat">Fat</string>
+    <string name="macro_protein">Protein</string>
+
+    <string name="day_name_workout">Workout Day</string>
+    <string name="day_name_rest">Rest Day</string>
+    <string name="day_cals_total_workout">Total Workout Day Calories:</string>
+    <string name="day_cals_total_rest">Total Rest Day Calories:</string>
+
+    <string name="label_how_many">How many?</string>
+
+    <string name="option_sex_female">Female</string>
+    <string name="option_sex_male">Male</string>
+    <string name="option_unit_imperial">Imperial</string>
+    <string name="option_unit_imperial_desc">lbs, feet/inches</string>
+    <string name="option_unit_metric">Metric</string>
+    <string name="option_unit_metric_desc">kgs, meters</string>
+
+    <string name="prompt_continue">Continue</string>
+    <string name="prompt_finish">Finish</string>
+    <string name="prompt_next">Next</string>
+    <string name="prompt_input_calculate1">Tell me about yourself.</string>
+    <string name="prompt_input_calculate1.1">I\'m a...</string>
+    <string name="prompt_input_calculate1.2.1">I\'m...</string>
+    <string name="prompt_input_calculate1.2.2">years old.</string>
+    <string name="prompt_input_calculate1.3">I measure myself with...</string>
+    <string name="prompt_input_macros">Enter your macros</string>
+
+    <string name="unit_grams">grams</string>
+    <string name="title_activity_calculate_macro2">CalculateMacro2Activity</string>
 </resources>

@@ -15,22 +15,20 @@ public class ManualMacroInputActivity extends AppCompatActivity {
     EditText workProInput, workCarbsInput, workFatInput, restProInput, restCarbsInput, restFatInput;
     TextView workTotCals, restTotCals;
 
-    public static final String PREFS_NAME = "PrefsFile";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_macro_input);
 
-        final Button continueBtn = (Button) findViewById(R.id.continueBtn);
-        workProInput = (EditText) findViewById(R.id.workProInput);
-        workCarbsInput = (EditText) findViewById(R.id.workCarbsInput);
-        workFatInput = (EditText) findViewById(R.id.workFatInput);
-        restProInput = (EditText) findViewById(R.id.restProInput);
-        restCarbsInput = (EditText) findViewById(R.id.restCarbsInput);
-        restFatInput = (EditText) findViewById(R.id.restFatInput);
-        workTotCals = (TextView) findViewById(R.id.workTotCals);
-        restTotCals = (TextView) findViewById(R.id.restTotCals);
+        final Button continueBtn = findViewById(R.id.ManualMacroInputContinueBtn);
+        workProInput = findViewById(R.id.workProInput);
+        workCarbsInput = findViewById(R.id.workCarbsInput);
+        workFatInput = findViewById(R.id.workFatInput);
+        restProInput = findViewById(R.id.restProInput);
+        restCarbsInput = findViewById(R.id.restCarbsInput);
+        restFatInput = findViewById(R.id.restFatInput);
+        workTotCals = findViewById(R.id.workTotCals);
+        restTotCals = findViewById(R.id.restTotCals);
 
         workPro = workCarbs = workFat = restPro = restCarbs = restFat = workTot = restTot = 0;
 
@@ -105,7 +103,7 @@ public class ManualMacroInputActivity extends AppCompatActivity {
             // TODO: Input validation
             @Override
             public void onClick(View v) {
-                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences settings = getSharedPreferences(Constants.PREFS_NAME, 0);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putInt("workPro", workPro);
                 editor.putInt("workCarbs", Integer.parseInt(workCarbsInput.toString()));
